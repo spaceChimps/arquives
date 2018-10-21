@@ -61,7 +61,7 @@
       if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-              echo "<p class="infocord">"."X: " . $row["Cli_CoordX"]. " - Y: " . $row["Cli_CoordY"]."</p>". "<br>";
+              echo "<p class='infocord'>" . $row["Cli_CoordX"]. ", " . $row["Cli_CoordY"]."</p>";
           }
 
       } else {

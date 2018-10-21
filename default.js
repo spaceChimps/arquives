@@ -55,3 +55,18 @@ $(document).ready(function(){
 });
 
 
+
+var cont1 = $( "p.infocord" );
+var arry = [];
+
+for ( var i = 1; i < cont1.length + 1; i++ ) {
+    arry.push({
+      a: $("p.infocord:nth-of-type(" + i + ")").text()
+    });
+  }
+
+console.log(arry)
+
+
+
+
