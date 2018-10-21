@@ -13,7 +13,7 @@
 
   <!--Maps--->
       
-      <script src="default.js"></script>
+      <script src="defaultheatmap.js"></script>
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33848682-1"></script>
     <script>
@@ -146,12 +146,12 @@
   </div>
 </nav>
 
-  <h4> Seja você também um Herói, o mundo precisa de você!</h4>
-    <p> Space Hero é um Web app que utiliza crowdsourcing, ou seja, ele precisa de você para existir. </p>
+  <h4> Be a hero, the word need you!</h4>
+    <p class="space-hero"> Space Hero is a crowdsourcing web app, thats why, he needs you to exist. </p>
 
-<p>
- <button type="button" class="btn btn-danger" id="reportbtn">Relatar Incidente</button> 
-    <button style="margin:8px;" type="button" class="btn btn-warning">Validar Incidente</button>
+<p class="botoesemergencia">
+ <button type="button" class="btn btn-danger" id="reportbtn">Report an emergency</button> 
+    <button style="margin:8px;" type="button" class="btn btn-warning">Verify incident</button>
 </p>
   
 <div class="container">
@@ -163,6 +163,44 @@
 
     </div>
 </div>
+
+<div class="container fotos-funcionalidade">
+  <h2 class="progress-title">Coming soon</h2>
+      <div class="logos">
+        <img class="col-xs-4" src="pinwind.png">
+        <img class="col-xs-4" src="aquapin.jpg">
+        <img class="col-xs-4" src="pinthiev.png">
+      </div>
+</div>
+<div class="container">
+  <h2>Progress Bar With Label</h2>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      70%
+    </div>
+  </div>
+</div>
+<div class="container footer-container">
+  <div class="col-xs-12 col-md-3 footer-imagem">
+    <img class="foto-nasa" src="nasa.jpg" width="200" height="200">
+  </div>
+  <div class="col-xs-12 col-md-9 footer-developers">
+    <div class="footer-time">
+      <h4>Developed by:</h4>
+      <p>Alex Barbosa</p>
+      <p>Eric Mizuta</p>
+      <p>Luiz Guilherme</p>
+      <p>Marcos Ewbank</p>
+      <p>Otavio Glycerio</p>
+    </div>  
+      <div class="footer-texto">
+        <h4>SpaceChimps</h4>
+        <p>#SpaceAppsSP</p>
+        <p>#SpaceApps</p>
+      </div>
+  </div>
+</div>
+
 
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>

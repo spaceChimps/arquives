@@ -1,18 +1,68 @@
 body{
-    background-color:#f7f7f7;
+    background-color:#fff;
     color: white;
 }
 
 p {
-    margin: 0 100px 10px;
+    width: 19%;
+    display: inline-block;
+    text-align: center;
+    float: none;
+    font-size: 17.7px;
     text-align: center;
     color: black;
 }
 
 h4 {
-	text-align: center;
-	color: black;
+text-align: center;
+    color: black;
+    font-size: 30px;
 }
+.footer-container {
+    border-top: 1px solid #ccc;
+}
+
+.progress-bar {
+    background: #FF8F30;
+}
+
+h2.progress-title {
+    text-align: center;
+    color: black;
+}
+
+.footer-imagem {
+    display: inline-flex;
+}
+
+.footer-imagem img{
+    display: block;
+    margin: auto;
+}
+
+.footer-imagem h4 {
+    width: 100%;
+}
+
+.footer-imagem p {
+    width: 40%;
+}
+
+img.logo2img {
+    position: relative;
+    left: 50%;
+    margin-left: -125px;
+    width: 250px;
+}
+
+p.botoesemergencia {
+    width: 100%;
+}
+
+p.space-hero {
+    width: 100%;
+}
+
 p.infocord{
     display:none;
 }
@@ -22,7 +72,7 @@ span.cord2{
 .navbar-brand>img {
     position: relative;
     display: block;
-    top: -10px;
+    top: -11px;
 }
 
 .navbar-nav li:hover .content-login-v2 {
@@ -30,7 +80,6 @@ span.cord2{
 }
 
  .container{
-	border:1px solid #0000001a;
 	margin: 10px auto;
 }
  h2.title-login{
@@ -154,4 +203,9 @@ display: block;
     .navbar-header span p{
         display: none;
     }
+}
+ .center-content-login a.help{color: #f68e1e;margin: 10px 0;display: block;}
+
+ .footer-texto {
+    text-align: center;
 }
