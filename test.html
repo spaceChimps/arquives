@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Space Hero</title>
-  <meta charset="utf-8">
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Space Hero</title>
+    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!--Maps--->
+
+  <!--Maps--->
       
       <script src="default.js"></script>
 
@@ -34,10 +37,22 @@
 
   <link rel="stylesheet" type="text/css" href="home.css">
 
-
-</head>
-<body>
-    
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+   
     <?php
 
       $servername = "localhost";
@@ -61,7 +76,10 @@
       if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-              echo "<p class='infocord'>" . $row["Cli_CoordX"]. ", " . $row["Cli_CoordY"]."</p>";
+
+              echo "<p class='infocord'>".$row["Cli_CoordX"]."</p>";
+              echo "<span class='cord2'>" .$row["Cli_CoordY"]."</span>";
+
           }
 
       } else {
@@ -70,8 +88,6 @@
       $conn->close();
 
     ?>
-
-
 
 
 <nav class="navbar navbar-inverse">
@@ -150,7 +166,10 @@
     </div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_SSFUwIdOxIZcxbXS3kFPQYTakqPP6Ek&callback=myMap"></script>
-
-</body>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_SSFUwIdOxIZcxbXS3kFPQYTakqPP6Ek&callback=initMap">
+    </script>
+  </body>
 </html>
