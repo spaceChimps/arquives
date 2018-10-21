@@ -1,7 +1,7 @@
 
 
 
-
+var locX, locY = 0;
 
 
 $(document).ready(function(){
@@ -29,12 +29,17 @@ $(document).ready(function(){
 
 //Get user location 
 
+
+
 navigator.geolocation.watchPosition(logPosition);
 function logPosition(position) {
   // console.log(position);
   // log(aaa);
 
   var uluru = {lat: position.coords.latitude, lng: position.coords.longitude};
+
+  locX = position.coords.latitude;
+  locY = position.coords.longitude;
 
   map = new google.maps.Map(document.getElementById('map'), {
   center: uluru,
@@ -66,11 +71,19 @@ function logPosition(position) {
       }
       var locations = arry;
 
-
-
-
-
 });
 
 
 
+$(document).on('click','#reportbtn',function(e) {
+  var data ="Cli_CoordX=" + locX + "&" + "Cli_CoordY=" + locY;
+  console.log(data)
+  $.ajax({
+         data: data,
+         type: "post",
+         url: "insert.php",
+         success: function(data){
+              alert("Data Save: " + locX);
+         }
+});
+ });

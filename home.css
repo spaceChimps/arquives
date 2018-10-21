@@ -16,6 +16,9 @@ h4 {
 p.infocord{
     display:none;
 }
+span.cord2{
+    display: none;
+}
 .navbar-brand>img {
     position: relative;
     display: block;
