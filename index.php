@@ -146,8 +146,8 @@
   </div>
 </nav>
 
-  <h4> Be a hero, the word need you!</h4>
-    <p class="space-hero"> Space Hero is a crowdsourcing web app, thats why, he needs you to exist. </p>
+  <h4> Be a hero, the world needs you!</h4>
+    <p class="space-hero"> Space Hero is a crowdsourcing web app, thats why, he need you to exist. </p>
 
 <p class="botoesemergencia">
  <button type="button" class="btn btn-danger" id="reportbtn">Report an emergency</button> 

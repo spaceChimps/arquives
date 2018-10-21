@@ -1,10 +1,9 @@
-body{
-    background-color:#fff;
+body {
+    background-color: #fff;
     color: white;
 }
 
 p {
-    width: 19%;
     display: inline-block;
     text-align: center;
     float: none;
@@ -14,10 +13,11 @@ p {
 }
 
 h4 {
-text-align: center;
+    text-align: center;
     color: black;
     font-size: 30px;
 }
+
 .footer-container {
     border-top: 1px solid #ccc;
 }
@@ -35,7 +35,7 @@ h2.progress-title {
     display: inline-flex;
 }
 
-.footer-imagem img{
+.footer-imagem img {
     display: block;
     margin: auto;
 }
@@ -63,12 +63,14 @@ p.space-hero {
     width: 100%;
 }
 
-p.infocord{
-    display:none;
-}
-span.cord2{
+p.infocord {
     display: none;
 }
+
+span.cord2 {
+    display: none;
+}
+
 .navbar-brand>img {
     position: relative;
     display: block;
@@ -76,23 +78,25 @@ span.cord2{
 }
 
 .navbar-nav li:hover .content-login-v2 {
-    display:block;
+    display: block;
 }
 
- .container{
-	margin: 10px auto;
+.container {
+    margin: 10px auto;
 }
- h2.title-login{
-	    font-size: 27px;
+
+h2.title-login {
+    font-size: 27px;
     color: white;
     margin-top: 70px;
     margin-bottom: 30px;
     position: relative;
 }
- h3.sub-title-login{
-	font-size: 16px;
-	color: white;
-	margin-bottom: 15px;
+
+h3.sub-title-login {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
 }
 
 .content-login-v2 {
@@ -101,111 +105,184 @@ span.cord2{
     margin-top: 20px;
     margin-bottom: 40px;
 }
+
 .ham {
     height: 50px;
     display: block;
     float: right;
 }
-.ham img{
+
+.ham img {
     height: 50px;
     margin-right: 10px;
 }
 
- .btn-back-v2{
-float: left;
-margin-top: 20px;
-color: #b3b3b3;
-text-decoration: underline;
-font-weight: 600;
-}
- input,
- .btn-loginv2{
-width: 50%;
-}
- input{
-border-radius: 4px;
-margin-bottom: 15px;
-height: 40px;
-padding-left: 10px;
-}
- .btn-loginv2{border-color: #FF8F30;padding: 11.5px;color: #fff;font-size: 15px;line-height: 15px;font-family: Arial;font-weight: 700;box-shadow: 0 3px 0 0 #007299;background-color: #FF8F30;border-color: #f68e1e;border-radius: 4px;margin-bottom: 15px;box-shadow: none;}
- .center-content-login{float: none;text-align: center;border: 1px solid #00000000;border-radius:4px;border: 1px solid;width: 700px;position: relative;background: #080808;left: 50%;margin-left: -350px;}
- .login-modal p{
-color: white;
-font-size: 14px;
-line-height: 18px;
-padding: 0 30px;
-}
- .login-modal .style-line,
-  .line{
-color: #7e7e7e;
-}
- .login-modal .style-line{margin-bottom: 0;padding: 10px 20px;}
- .login-modal .style-line span{color:#f68e1e;position: relative;padding: 0px 30px;}
- .login-modal .line{
-padding: 0;
-}
- .login-buttons{padding: 0px 70px;}
- .login-buttons .button{
-width: 60%;
-height: 40px;
-margin: 5px 0;
-font-size: 14px;
-color: #fff;
-letter-spacing: 0.3px;
-font-weight: 600;
-}
- .login-buttons .button.facebook-login{
-background-color: #3c5898;
-}
- .login-buttons .button.facebook-login span{
-float: left;
-width: 20%;
-border-right: 1px solid #fff;
-}
- .login-buttons .button.facebook-login svg{
-fill: #fff;
-float: left;
-}
- .login-buttons .button.gmail-login{
-background-color: #d44638;
-}
- .login-buttons .button.gmail-login span{
-float: left;
-width: 20%;
-border-right: 1px solid #fff;
-}
- .login-buttons .button.gmail-login svg{
-fill: #fff;
-float: left;
-}
- .center-content-login a.help{
-color: #f68e1e;
-margin: 10px 0;
-display: block;
+.btn-back-v2 {
+    float: left;
+    margin-top: 20px;
+    color: #b3b3b3;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
-@media (max-width: 768px){
-    ul.nav.navbar-nav{
+input,
+.btn-loginv2 {
+    width: 50%;
+}
+
+input {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.btn-loginv2 {
+    border-color: #FF8F30;
+    padding: 11.5px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: Arial;
+    font-weight: 700;
+    box-shadow: 0 3px 0 0 #007299;
+    background-color: #FF8F30;
+    border-color: #f68e1e;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: none;
+}
+
+.center-content-login {
+    float: none;
+    text-align: center;
+    border: 1px solid #00000000;
+    border-radius: 4px;
+    border: 1px solid;
+    width: 700px;
+    position: relative;
+    background: #080808;
+    left: 50%;
+    margin-left: -350px;
+}
+
+.login-modal p {
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 30px;
+}
+
+.login-modal .style-line,
+.line {
+    color: #7e7e7e;
+}
+
+.login-modal .style-line {
+    margin-bottom: 0;
+    padding: 10px 20px;
+}
+
+.login-modal .style-line span {
+    color: #f68e1e;
+    position: relative;
+    padding: 0px 30px;
+}
+
+.login-modal .line {
+    padding: 0;
+}
+
+.login-buttons {
+    padding: 0px 70px;
+}
+
+.login-buttons .button {
+    width: 60%;
+    height: 40px;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+.login-buttons .button.facebook-login {
+    background-color: #3c5898;
+}
+
+.login-buttons .button.facebook-login span {
+    float: left;
+    width: 20%;
+    border-right: 1px solid #fff;
+}
+
+.login-buttons .button.facebook-login svg {
+    fill: #fff;
+    float: left;
+}
+
+.login-buttons .button.gmail-login {
+    background-color: #d44638;
+}
+
+.login-buttons .button.gmail-login span {
+    float: left;
+    width: 20%;
+    border-right: 1px solid #fff;
+}
+
+.login-buttons .button.gmail-login svg {
+    fill: #fff;
+    float: left;
+}
+
+.center-content-login a.help {
+    color: #f68e1e;
+    margin: 10px 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    ul.nav.navbar-nav {
         display: none;
     }
-    .navbar-header span p{
+    .navbar-header span p {
         color: #fff;
         float: left;
-        margin: 15px 0 0 -10px;
+        margin: 0px 0 0 -10px;
+    }
+    .center-content-login {
+        float: none;
+        text-align: center;
+        border: 1px solid #00000000;
+        border-radius: 4px;
+        border: 1px solid;
+        width: 100%;
+        background: #080808;
+        left: 0;
+        margin-left: 0;
+    }
+    .footer-time p{    
+        width: 100%;
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .ham {
         display: none;
     }
-    .navbar-header span p{
+    .navbar-header span p {
         display: none;
     }
 }
- .center-content-login a.help{color: #f68e1e;margin: 10px 0;display: block;}
 
- .footer-texto {
+.center-content-login a.help {
+    color: #f68e1e;
+    margin: 10px 0;
+    display: block;
+}
+
+.footer-texto {
     text-align: center;
 }
