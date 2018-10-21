@@ -1,74 +1,28 @@
+function initMap() {
 
-
-
-var locX, locY = 0;
-
-
-$(document).ready(function(){
-
-  $(".login-toggle").click(function(){
-    $(".content-login-v2").toggle(400);
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 3,
+    center: {lat: -28.024, lng: 140.887}
   });
 
-  $(".ham").click(function(){
-    $("ul.nav.navbar-nav").toggle(400);
-    $(".navbar-header span p").toggle(50);
+  // Create an array of alphabetical characters used to label the markers.
+  var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  // Add some markers to the map.
+  // Note: The code uses the JavaScript Array.prototype.map() method to
+  // create an array of markers based on a given "locations" array.
+  // The map() method here has nothing to do with the Google Maps API.
+  var markers = locations.map(function(location, i) {
+    return new google.maps.Marker({
+      position: location,
+      label: labels[i % labels.length]
+    });
   });
 
- var cont1 = $( "p.infocord" );
-        var arry = [];
-
-        for ( var i = 1; i < cont1.length + 1; i++ ) {
-            arry.push({
-               lat: parseFloat($("p.infocord:nth-of-type(" + i + ")").text()),
-               lng: parseFloat($("span.cord2:nth-of-type(" + i + ")").text())
-            });
-          }
-
-        console.log(arry)
-
-//Get user location 
-
-
-
-navigator.geolocation.watchPosition(logPosition);
-function logPosition(position) {
-  // console.log(position);
-  // log(aaa);
-
-  var uluru = {lat: position.coords.latitude, lng: position.coords.longitude};
-
-  locX = position.coords.latitude;
-  locY = position.coords.longitude;
-
-  map = new google.maps.Map(document.getElementById('map'), {
-  center: uluru,
-  zoom: 14
-  });
-
-  var marker = new google.maps.Marker({
-    position: uluru,
-     map: map
-   });
-
-   // Create an array of alphabetical characters used to label the markers.
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        // Add some markers to the map.
-        // Note: The code uses the JavaScript Array.prototype.map() method to
-        // create an array of markers based on a given "locations" array.
-        // The map() method here has nothing to do with the Google Maps API.
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: locations,
-            label: labels[i % labels.length]
-          });
-        });
-
-        // Add a marker clusterer to manage the markers.
-        var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-      }
+  // Add a marker clusterer to manage the markers.
+  var markerCluster = new MarkerClusterer(map, markers,
+      {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+}
   var locations = [
 {lat: -9.881, lng: -36.23},
 {lat: -9.442, lng: -35.849},
@@ -247,19 +201,15 @@ function logPosition(position) {
 {lat: -3.108, lng: -43.255}
 ]
 
+
+$(document).ready(function(){
+
+  $(".login-toggle").click(function(){
+    $(".content-login-v2").toggle(400);
+  });
+
+  $(".ham").click(function(){
+    $("ul.nav.navbar-nav").toggle(400);
+    $(".navbar-header span p").toggle(50);
+  });
 });
-
-
-
-$(document).on('click','#reportbtn',function(e) {
-  var data ="Cli_CoordX=" + locX + "&" + "Cli_CoordY=" + locY;
-  console.log(data)
-  $.ajax({
-         data: data,
-         type: "post",
-         url: "insert.php",
-         success: function(data){
-              alert("Data Save: " + locX);
-         }
-});
- });
