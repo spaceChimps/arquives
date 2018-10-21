@@ -39,3 +39,19 @@ function initMap() {
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }
+
+
+
+$(document).ready(function(){
+  $(".login-toggle").click(function(){
+    $(".content-login-v2").toggle(400);
+  });
+
+  $(".ham").click(function(){
+    $("ul.nav.navbar-nav").toggle(400);
+    $(".navbar-header span p").toggle(50);
+  });
+
+});
+
+

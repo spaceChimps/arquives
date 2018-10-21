@@ -7,24 +7,81 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_SSFUwIdOxIZcxbXS3kFPQYTakqPP6Ek&callback=initMap">
+
+    <!--Maps--->
+      
+      <script src="default.js"></script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33848682-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-33848682-1');
     </script>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Simplest possible examples of HTML, CSS and JavaScript.">
+    <meta name="author" content="//samdutton.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta itemprop="name" content="simpl.info: simplest possible examples of HTML, CSS and JavaScript">
+    <meta itemprop="image" content="/images/icons/icon192.png">
+    <meta id="theme-color" name="theme-color" content="#fff">
+
+
+
   <link rel="stylesheet" type="text/css" href="home.css">
-  <script>
-  $(document).ready(function(){
-    $(".login-toggle").click(function(){
-      $(".content-login-v2").toggle(400);
-    });
-  });
-</script>
+
+
 </head>
 <body>
+    
+    <?php
+
+      $servername = "localhost";
+      $username = "id7311462_ericmizuta";
+      $password = "eric1234";
+      $dbname   = "id7311462_spacechimps";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      } 
+
+
+      $sql = "SELECT Cli_CoordX, Cli_CoordY FROM Cliente";
+
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+              echo "<p class="infocord">"."X: " . $row["Cli_CoordX"]. " - Y: " . $row["Cli_CoordY"]."</p>". "<br>";
+          }
+
+      } else {
+          echo "0 results";
+      }
+      $conn->close();
+
+    ?>
+
+
+
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#"><img src="firepin.png" width="40px" height="40px"></a>
+      <span><p>Space Hero</p></span>
+      <div class="ham">
+          <img src="hamburger.png" width="40px" height="40px">
+      </div>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Space Hero</a></li>
@@ -87,57 +144,13 @@
     <div class="mapa">
       
       <div id="map" style="width:100%;height:400px;"></div>
-        <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 14
-        });
-        infoWindow = new google.maps.InfoWindow;
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+        
 
     </div>
 </div>
 
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_SSFUwIdOxIZcxbXS3kFPQYTakqPP6Ek&callback=myMap"></script>
 
 </body>
 </html>

@@ -13,7 +13,9 @@ h4 {
 	text-align: center;
 	color: black;
 }
-
+p.infocord{
+    display:none;
+}
 .navbar-brand>img {
     position: relative;
     display: block;
@@ -46,6 +48,15 @@ h4 {
     width: 100% !important;
     margin-top: 20px;
     margin-bottom: 40px;
+}
+.ham {
+    height: 50px;
+    display: block;
+    float: right;
+}
+.ham img{
+    height: 50px;
+    margin-right: 10px;
 }
 
  .btn-back-v2{
@@ -116,4 +127,28 @@ border-right: 1px solid #fff;
 fill: #fff;
 float: left;
 }
- .center-content-login a.help{color: #f68e1e;margin: 10px 0;display: block;}
+ .center-content-login a.help{
+color: #f68e1e;
+margin: 10px 0;
+display: block;
+}
+
+@media (max-width: 768px){
+    ul.nav.navbar-nav{
+        display: none;
+    }
+    .navbar-header span p{
+        color: #fff;
+        float: left;
+        margin: 15px 0 0 -10px;
+    }
+}
+
+@media (min-width: 768px){
+    .ham {
+        display: none;
+    }
+    .navbar-header span p{
+        display: none;
+    }
+}
